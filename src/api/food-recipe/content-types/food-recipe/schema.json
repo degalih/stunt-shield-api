@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "food_recipes",
+  "info": {
+    "singularName": "food-recipe",
+    "pluralName": "food-recipes",
+    "displayName": "food-recipe",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "ingredients": {
+      "type": "json"
+    },
+    "steps": {
+      "type": "json"
+    },
+    "nutritions": {
+      "type": "json"
+    },
+    "trivia": {
+      "type": "text"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
