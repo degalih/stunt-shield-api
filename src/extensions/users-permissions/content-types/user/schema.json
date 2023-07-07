@@ -67,10 +67,11 @@
     },
     "firstName": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "lastName": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }
