@@ -24,9 +24,6 @@
     "nutritions": {
       "type": "json"
     },
-    "trivia": {
-      "type": "text"
-    },
     "img": {
       "type": "media",
       "multiple": false,
@@ -37,6 +34,12 @@
         "videos",
         "audios"
       ]
+    },
+    "source": {
+      "type": "string"
+    },
+    "age": {
+      "type": "string"
     }
   }
 }
