@@ -35,10 +35,16 @@
         "audios"
       ]
     },
-    "source": {
+    "recipe_source": {
       "type": "string"
     },
     "age": {
+      "type": "string"
+    },
+    "large_portion": {
+      "type": "string"
+    },
+    "nutrition_info_source": {
       "type": "string"
     }
   }
