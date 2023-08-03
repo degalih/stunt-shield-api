@@ -77,7 +77,7 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::favorite.favorite",
-      "mappedBy": "User"
+      "mappedBy": "user"
     }
   }
 }
