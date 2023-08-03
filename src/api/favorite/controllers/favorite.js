@@ -9,7 +9,7 @@ const { createCoreController } = require("@strapi/strapi").factories;
 module.exports = createCoreController(
   "api::favorite.favorite",
   ({ strapi }) => ({
-    async me(ctx) {
+    async recipe(ctx, next) {
       const user = ctx.state.user;
       if (!user) {
         return ctx.badRequest(null, [
@@ -17,12 +17,25 @@ module.exports = createCoreController(
         ]);
       }
 
-      const data = await strapi.services.favorite.findMany(
+      const data = await strapi.entityService.findMany(
         "api::favorite.favorite",
         {
           filters: {
             user: {
               id: user.id,
+            },
+          },
+          populate: {
+            user: {
+              fields: ["id", "email"],
+            },
+            recipes: {
+              fields: ["id", "name", "age"],
+              populate: {
+                img: {
+                  fields: ["url"],
+                },
+              },
             },
           },
         }
