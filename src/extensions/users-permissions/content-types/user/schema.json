@@ -72,6 +72,12 @@
     "lastName": {
       "type": "string",
       "required": true
+    },
+    "FavoriteRecipe": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::favorite.favorite",
+      "mappedBy": "User"
     }
   }
 }

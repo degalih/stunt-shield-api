@@ -46,6 +46,12 @@
     },
     "nutrition_info_source": {
       "type": "string"
+    },
+    "favorites": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::favorite.favorite",
+      "mappedBy": "recipes"
     }
   }
 }
