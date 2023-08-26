@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * poster controller
+ * recipe controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::poster.poster');
+module.exports = createCoreController('api::recipe.recipe');
